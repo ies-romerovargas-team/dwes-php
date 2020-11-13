@@ -14,7 +14,7 @@
     </p>
     <hr>
     <form action="07-02.php" method="post">
-        <label>Base Imponible: <input type="text" name="n1" /></label><br>
+        <label>Base Imponible: <input type="number" name="n1" min='0' step='0.1' /></label><br>
         <label>IVA: <input type="text" name="n2" /> %</label><br>
         <input type="submit" value="Enviar">
     </form>

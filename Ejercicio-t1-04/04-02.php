@@ -13,7 +13,7 @@
         Escribe un programa que sume, reste, multiplique y divida dos números introducidos por teclado.
     </p>
     <hr>
-    <?php 
+    <?php     
     echo $_POST['n1'], " + ", $_POST['n2'], " = ", $_POST['n1'] + $_POST['n2'];
     echo "<br>"; 
     echo $_POST['n1'], " - ", $_POST['n2'], " = ", $_POST['n1'] - $_POST['n2'];

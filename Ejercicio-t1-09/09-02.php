@@ -8,14 +8,14 @@
 </head>
 
 <body>
-    <h1>Ejercicio T3-01</h1>
+    <h1>Ejercicio T9-01</h1>
     <p>
-        Realiza un conversor de pesetas a euros. La cantidad en pesetas que se quiere convertir se deberá introducir por
-        teclado.
+        Escribe un programa que calcule el volumen de un cono mediante la fórmula V = 1/3 π r<sup>2</sup> h.
     </p>
     <hr>
-    <?php        
-        echo $_POST['n1'], " pesetas => ", round($_POST['n1'] / 166.3860, 2), " €";
+    <?php
+    CONST PI = 3.1416;
+    echo "V = 1/3 * π * ", $_POST['r'], "<sup>2</sup> * ", $_POST['h'], " => ", PI * $_POST['r'] * $_POST['r'] * $_POST['h'] / 3, "<br>";
     ?>
     <br>
     <button onclick="window.history.go(-1); return false;">Volver</button>

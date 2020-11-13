@@ -8,14 +8,13 @@
 </head>
 
 <body>
-    <h1>Ejercicio T3-01</h1>
+    <h1>Ejercicio T10-01</h1>
     <p>
-        Realiza un conversor de pesetas a euros. La cantidad en pesetas que se quiere convertir se deberá introducir por
-        teclado.
+        Realiza un conversor de Mb a Kb
     </p>
     <hr>
-    <?php        
-        echo $_POST['n1'], " pesetas => ", round($_POST['n1'] / 166.3860, 2), " €";
+    <?php
+        echo $_POST['n1'], " Mb => ", $_POST['n1'] * 1024 ," Kb<br>";
     ?>
     <br>
     <button onclick="window.history.go(-1); return false;">Volver</button>
