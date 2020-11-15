@@ -6,7 +6,7 @@
     <title>Ejercicio T2-07</title>
 </head>
 <body>
-    <p><a href="/index.php">Inicio</a></p>
+    <p><a href="../../index.php">Inicio</a></p><h1>Ejercicio T2-07</h1>
     <p>Realiza un programa que calcule la media de tres notas.</p>
     <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
         <label>Introduzca notas:

@@ -6,7 +6,7 @@
     <title>Ejercicio T2-03</title>
 </head>
 <body>
-    <p><a href="/index.php">Inicio</a></p>
+    <p><a href="../../index.php">Inicio</a></p><h1>Ejercicio T2-03</h1>
     <p>Escribe un programa en que dado un número del 1 a 7 escriba 
     el correspondiente nombre del día de la semana.</p>
     <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">

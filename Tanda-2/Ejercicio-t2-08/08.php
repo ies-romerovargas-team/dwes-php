@@ -6,7 +6,7 @@
     <title>Ejercicio T2-08</title>
 </head>
 <body>
-    <p><a href="/index.php">Inicio</a></p>
+    <p><a href="../../index.php">Inicio</a></p><h1>Ejercicio T2-08</h1>
     <p>Amplía el programa anterior para que diga la nota del boletín (insuficiente, 
     suficiente, bien, notable o sobresaliente).</p>
     <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">

@@ -6,7 +6,7 @@
     <title>Ejercicio T2-04</title>
 </head>
 <body>
-    <p><a href="/index.php">Inicio</a></p>
+    <p><a href="../../index.php">Inicio</a></p><h1>Ejercicio T2-04</h1>
     <p>Vamos a ampliar uno de los ejercicios de la relación anterior para considerar las 
     horas extras. Escribe un programa que calcule el salario semanal de un trabajador 
     teniendo en cuenta que las horas ordinarias (40 primeras horas de trabajo) se pagan 

@@ -6,7 +6,7 @@
     <title>Ejercicio T2-05</title>
 </head>
 <body>
-    <p><a href="/index.php">Inicio</a></p>
+    <p><a href="../../index.php">Inicio</a></p><h1>Ejercicio T2-05</h1>
     <p>Realiza un programa que resuelva una ecuación de primer grado (del tipo ax + b = 0)</p>
     <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
         <label>Introduzca los valores de la ecuación:
