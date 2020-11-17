@@ -16,16 +16,34 @@
         diferentes asignaturas del curso.</p>
     <?php
     $preguntas =[
-        "pregunta0" => ["respuesta1", True, "respuesta2", False],
-        "pregunta1" => ["respuesta1", True, "respuesta2", False],
-        "pregunta2" => ["respuesta1", False, "respuesta2", True, "respuesta3", False],
-        "pregunta3" => ["respuesta1", True, "respuesta2", False],
-        "pregunta4" => ["respuesta1", False, "respuesta2", True],
-        "pregunta5" => ["respuesta1", True, "respuesta2", False],
-        "pregunta6" => ["respuesta1", False, "respuesta2", False, "respuesta3", False, "respuesta4", True],
-        "pregunta7" => ["respuesta1", True, "respuesta2", False],
-        "pregunta8" => ["respuesta1", False, "respuesta2", True, "respuesta3", False, "respuesta4", False, "respuesta5", False],
-        "pregunta9" => ["respuesta1", True, "respuesta2", False]
+        "En Java ¿Qué es JSON?" => 
+        ["Un formato ligero para el intercambio de datos", True, "Tecnología con la finalidad de facilitar la integración en la misma página web de servicios y aplicaciones a priori independientes.", False,
+        "Servicios interactivos en red dando al usuario el control de los datos", False, "Componentes modulares de interfaz de usuario gestionados y visualizados en un portal web", False],
+        "Un intérprete es:" => 
+        ["Un programa que convierte un texto de un idioma a otro", False, "El módulo de los programas gráficos que transporta los valores numéricos a puntos en pantalla", False, 
+        "Un traductor de lenguaje de programación de alto nivel que traduce y ejecuta el programa al mismo tiempo", True, "Un lenguaje que detecta errores de interpretación", False],
+        "La especificación de formato de documentos HTML, Hypertext Markup Language, es un subconjunto de las normas:" => 
+        ["De programación que rigen en Internet.", False, "SGML (Standarized General Markup Language)", True, 
+        "De interoperabilidad entre páginas web", False, "Es un lenguaje de programación en sentido puro", False],
+        "El lenguaje HTML permite la organización de una página Web en distintos marcos. ¿Qué etiquetas de HTML se utilizan para este propósito?" => 
+        ["FRAME, SUBFRAME", False, "FRAME, FRAMESET", True, "FRAME, junto con los atributos ROWS y COLS", False, "FRAME, TRFRAME y TDFRAME", False],
+        "En un documento XML, la parte donde se definen los enlaces a otros documentos, código ejecutable, etc es:" => 
+        ["DTD", False, "XSL", False, "XLL", True, "DHTML", False],
+        "El script integrado en una página web que realiza una serie de operaciones en función de los datos introducidos por el usuario y que se ejecuta en el servidor son" => 
+        ["Programas Javascript", False, "Scripts CGI", False, "Páginas dinámicas.", True, "Modulación de resultados"],
+        "Cuál de las siguientes afirmaciones sobre XML es correcta?" => 
+        ["XML es la implementación propietaria de Xerox de HTML, que incorpora multicasting.", False, "XML es una extensión, en formato fijo, del conocido lenguaje HTML", False, 
+        "XML es el estándar para embeber módulos de acceso a datos y bases de datos en páginas web creadas con HTML", False, "XML es un metalenguaje, que está escrito en SGML, y se usa para definir otros lenguajes", True],
+        "¿Qué es Javascript?" => 
+        ["Un compilador de Java.", False, "Un generador de applets Java", False,
+        "Un applet Java que se ejecuta de forma embebida desde un lenguaje de script.", False, "Un lenguaje de script basado en la sintaxis de Java.", True],
+        "El lenguaje PHP (Hypertext Preprocessor), utilizado para la programación en Internet" => 
+        ["Es un lenguaje de scripting orientado a objetos que permite integrarse en páginas HTML facilitando la creación de páginas dinámicas al ejecutarse en el cliente", False, 
+        "Es un lenguaje de scripting, embebido en páginas HTML que se ejecuta en el servidor", True, " Es un lenguaje de programación, y el resultado de la compilación genera ficheros XML, que son transmitidos y ejecutados en el cliente", False, 
+        "Permite la implementación de aplicaciones sobre PPP, el protocolo para la transmisión de paquetes IP sobre líneas de comunicación de tipo serie", False],
+        "¿En una misma página web es posible introducir código en lenguajes PHP, Javascript y VBScript?:" => 
+        ["Sí", True, "No, ya que no se pueden mezclar distintas tecnologías de script", False, "No porque se trata de lenguajes de cliente y servidor.", False,
+        "Ninguna de las anteriores es correcta", False]
     ];
     echo "\n<br/>";
     if(isset($_POST['Enviar'])){        
@@ -47,6 +65,7 @@
                 echo " style='color: red'>No contestada</span>\n<br/>\n<br/>";
             }
             $cont++;
+            echo "<hr>\n";
         }
         echo "\nPreguntas correctas: ", $puntos;
         echo "\n<br>";

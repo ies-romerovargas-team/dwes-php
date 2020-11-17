@@ -11,7 +11,7 @@
     <h1>DWES</h1>
     <h3>Tanda 1</h3>
     <ul>
-        <li><a href="Tanda-1/Ejercicio-t1-01/01-01.php">Ejercicio 1</a></li>        
+        <li><a href="Tanda-1/Ejercicio-t1-01/01-01.php">Ejercicio 1</a></li>
         <li><a href="Tanda-1/Ejercicio-t1-02/02-01.php">Ejercicio 2</a></li>
         <li><a href="Tanda-1/Ejercicio-t1-03/03-01.php">Ejercicio 3</a></li>
         <li><a href="Tanda-1/Ejercicio-t1-04/04-01.php">Ejercicio 4</a></li>
@@ -37,6 +37,13 @@
         <li><a href="Tanda-2/Ejercicio-t2-10/10.php">Ejercicio 10</a></li>
         <li><a href="Tanda-2/Ejercicio-t2-11/11.php">Ejercicio 11</a></li>
         <li><a href="Tanda-2/Ejercicio-t2-12/12.php">Ejercicio 12</a></li>
+        <li><a href="Tanda-2/Ejercicio-t2-13/13.php">Ejercicio 13</a></li>
+        <li><a href="Tanda-2/Ejercicio-t2-14/14.php">Ejercicio 14</a></li>
+        <li><a href="Tanda-2/Ejercicio-t2-15/15.php">Ejercicio 15</a></li>
+        <li><a href="Tanda-2/Ejercicio-t2-16/16.php">Ejercicio 16</a></li>
+        <li><a href="Tanda-2/Ejercicio-t2-17/17.php">Ejercicio 17</a></li>
+        <li><a href="Tanda-2/Ejercicio-t2-18/18.php">Ejercicio 18</a></li>
+        <li><a href="Tanda-2/Ejercicio-t2-19/19.php">Ejercicio 19</a></li>
     </ul>
 </body>
 

@@ -47,8 +47,7 @@
                 "Acuario" => [20,01,18,02],
                 "Piscis" => [19,02,20,03]
             ];
-            $meses31 = [1,3,5,7,8,10,12];            
-            // comprobar fecha valida
+            $meses31 = [1,3,5,7,8,10,12];        
             $dia = $_POST["dia"];
             $mes = $_POST["mes"];
             $error = True;
