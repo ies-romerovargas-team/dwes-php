@@ -22,8 +22,16 @@
     if(isset($_POST['Enviar'])){
         $n = $_POST['n'];
         echo $n, " ";
-        if($n%2==0) echo "|| Es par ";
-        if($n%5==0) echo "|| Es divisible por 5";
+        if($n%2) {
+            echo "|| Es impar ";
+        } else {
+            echo "|| Es par ";
+        }
+        if($n%5) {
+            echo "|| No es divisible por 5";
+        } else {
+            echo "|| Es divisible por 5";
+        }
     }
     ?>
     </p>

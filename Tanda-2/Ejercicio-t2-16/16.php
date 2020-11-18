@@ -21,7 +21,9 @@
         <?php
         if(isset($_POST['Enviar'])){
             $n = $_POST['n1'];
-            echo substr($n, strlen($n)-1, 1);
+            echo $n, " ", $n%10, "<br>";
+            // Con cadenas:
+            echo $n, " ", substr($n, strlen($n)-1, 1);
         }
     ?>
     </p>

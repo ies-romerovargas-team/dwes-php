@@ -33,9 +33,9 @@
                 }
             }
             if($capicua){
-                echo "<br>", $n, " Es capicua!!";
+                echo "<br>", $n, " Es capicúa!!";
             } else {
-                echo "<br>", $n, " No es capicua";
+                echo "<br>", $n, " No es capicúa";
             }
         }
     ?>

@@ -22,6 +22,14 @@
         <?php
         if(isset($_POST['Enviar'])){
             $n = abs($_POST['n1']);
+            // Con mates TO DO
+            $i = 5;
+            while ($i>1)
+            {
+                $n = $n/10;
+                $i--;
+            }
+            // Con cadenas
             echo substr($n, 0, 1);
         }
     ?>
