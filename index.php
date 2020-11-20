@@ -45,6 +45,18 @@
         <li><a href="Tanda-2/Ejercicio-t2-18/18.php">Ejercicio 18</a></li>
         <li><a href="Tanda-2/Ejercicio-t2-19/19.php">Ejercicio 19</a></li>
     </ul>
+    <h3>Tanda 4</h3>
+    <ul>
+        <li><a href="Tanda-3/Ejercicio-t3-01/01.php">Ejercicio 1</a></li>
+        <li><a href="Tanda-3/Ejercicio-t3-02/02.php">Ejercicio 2</a></li>
+        <li><a href="Tanda-3/Ejercicio-t3-03/03.php">Ejercicio 3</a></li>
+        <li><a href="Tanda-3/Ejercicio-t3-04/04.php">Ejercicio 4</a></li>
+        <li><a href="Tanda-3/Ejercicio-t3-05/05.php">Ejercicio 5</a></li>
+        <li><a href="Tanda-3/Ejercicio-t3-06/06.php">Ejercicio 6</a></li>
+        <li><a href="Tanda-3/Ejercicio-t3-07/07.php">Ejercicio 7</a></li>
+        <li><a href="Tanda-3/Ejercicio-t3-08/08.php">Ejercicio 8</a></li>
+        <li><a href="Tanda-3/Ejercicio-t3-09/09.php">Ejercicio 9</a></li>
+    </ul>
 </body>
 
 </html>
