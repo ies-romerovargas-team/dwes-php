@@ -12,7 +12,12 @@
     <h1>Ejercicio T3-03</h1>
     <p>Muestra los números múltiplos de 5 de 0 a 100 utilizando un bucle do-while</p>
     <p>
-        <?php               
+        <?php 
+        $i = 0;
+        do{
+            echo $i * 5, " ";
+            $i++;
+        }while($i*5<=100);
         ?>
     </p>
 </body>

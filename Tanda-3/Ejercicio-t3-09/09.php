@@ -17,9 +17,9 @@
         <input type="submit" name="Enviar">
     </form>
     <?php if(isset($_POST['n']) && is_numeric($_POST['n'])): ?>
-    <p><?php echo "Número: ", $_POST['n'];?></p>
+    <p><?php echo "Número: ", number_format($_POST['n'],0);?></p>
     <?php
-        $n = $_POST['n'];
+        $n = abs($_POST['n']);
         $i = 1;
         while ($n>=10){
             $i++;

@@ -12,7 +12,12 @@
     <h1>Ejercicio T3-05</h1>
     <p>Muestra los números del 320 al 160, contando de 20 en 20 utilizando un bucle while</p>
     <p>
-        <?php               
+        <?php
+        $i=320;
+        while($i>=160):
+            echo $i, " ";
+            $i=$i-20;
+        endwhile;               
         ?>
     </p>
 </body>
