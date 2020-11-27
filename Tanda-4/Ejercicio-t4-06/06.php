@@ -11,7 +11,7 @@
   <p><a href="../../index.php">Inicio</a></p>
   <h1>Ejercicio T4-06</h1>
   <p>Realiza un programa que pida 8 números enteros y que luego muestre esos números
-   de colores, los pares de un color y los impares de otro</p>
+    de colores, los pares de un color y los impares de otro</p>
   <?php  
   if(isset($_POST['OK'])):
     $contador = $_POST['contador'] + 1;
@@ -34,10 +34,10 @@
   endif;
   ?>
   <form action="<?= $_SERVER['PHP_SELF']?>" method="POST">
-    Introduzca Numero (<?=$contador+1?>)<br/>
+    Introduzca Numero (<?=$contador+1?>)<br />
     <input type="number" name="numero" autofocus>
     <input type="hidden" name="contador" value="<?=$contador?>">
-    <input type="hidden" name="ristraNumeros" value="<?=$ristraNumeros?>">   
+    <input type="hidden" name="ristraNumeros" value="<?=$ristraNumeros?>">
     <input type="submit" name="OK" value="OK">
   </form>
 

@@ -10,11 +10,11 @@
 <body>
   <p><a href="../../index.php">Inicio</a></p>
   <h1>Ejercicio T4-04</h1>
-  <p>Escribe un programa que genere 100 números aleatorios del 0 al 20 y que los muestre por
-   pantalla separados por espacios. El programa pedirá entonces por teclado dos valores y a 
-   continuación cambiará todas las ocurrencias del primer valor por el segundo en la lista 
-   generada anteriormente. Los números que se han cambiado deben aparecer resaltados de un 
-   color diferente.</p>
+  <p>Escribe un programa que genere 100 números aleatorios del 20 al 50 y que los muestre por
+    pantalla separados por espacios. El programa pedirá entonces por teclado dos valores y a
+    continuación cambiará todas las ocurrencias del primer valor por el segundo en la lista
+    generada anteriormente. Los números que se han cambiado deben aparecer resaltados de un
+    color diferente.</p>
   <?php
   if(!isset($_POST['n1'])):
     $lista = "";
@@ -36,10 +36,10 @@
   endif;
   ?>
   <form action="<?= $_SERVER['PHP_SELF']?>" method="POST">
-    Introduzca un numero a buscar:<br/>
-    <input type="number" name="n1" autofocus><br/>
-    Introduzca un número a sustituir:<br/>
-    <input type="number" name="n2"><br/>
+    Introduzca un numero a buscar:<br />
+    <input type="number" name="n1" autofocus><br />
+    Introduzca un número a sustituir:<br />
+    <input type="number" name="n2"><br />
     <input type="hidden" name="lista" value="<?= $lista?>">
     <input type="submit" value="OK">
   </form>
