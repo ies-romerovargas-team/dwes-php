@@ -10,42 +10,50 @@
 <body>
   <p><a href="../../index.php">Inicio</a></p>
   <h1>Ejercicio T4-11</h1>
-  <p>Crea un mini-diccionario español-inglés que contenga, al menos, 20 palabras (con su traducción). Utiliza un array asociativo para almacenar las parejas de palabras. El programa pedirá una palabra en español y dará la correspondiente traducción en inglés.</p>
+  <p>Crea un mini-diccionario español-inglés que contenga, al menos, 20 palabras (con su traducción).
+   Utiliza un array asociativo para almacenar las parejas de palabras. El programa pedirá una palabra
+    en español y dará la correspondiente traducción en inglés.</p>
 
 <?php
   
   $diccionario = [
-    ""
+    "way" => "camino",
+    "which" => "cual",
+    "each" => "cada",
+    "many" => "muchos",
+    "people" => "gente",
+    "know" => "saber",
+    "work" => "trabajo",
+    "where" => "donde",
+    "only" => "solamente",
+    "every" => "cada",
+    "through" => "mediante",
+    "same" => "mismo",
+    "want" => "querer",
+    "also" => "además",
+    "hand" => "mano",
+    "even" => "incluso",
+    "such" => "tal",
+    "why" => "por qué",
+    "kind" => "tipo",
+    "near" => "cerca",
+    "answer" => "pregunta",
+    "grow" => "crecer",
+    "food" => "comida"
   ];
-  foreach($palos as $palo):
-    foreach($numeros as $key => $numero):
-      $cartas[][] = $key . '/'. $palo;
-      $cartas[array_key_last($cartas)][1]= $numero;
+?>
+<form action="<?=$_SERVER['PHP_SELF']?>" method="POST">
+  <input type="text" name="spanish" autofocus required>
+  <input type="submit" name="Enviar" value="TRADUCIR">
+</form>
+<?php if(isset($_POST['spanish'])):
+  $resultado = "No encontrado";
+  foreach($diccionario as $key => $word):
+    if($_POST['spanish']==$word) 
+      $resultado = $_POST['spanish'] . ": <em>" . $key . "</em>";
     endforeach;
-  endforeach;
-  /*
-  echo "<pre>";
-  print_r($cartas);
-  echo "</pre>";
-  */
-  for($i=0; $i<10; $i++):  
-    $a = rand(0, count($cartas) - 1);  
-    $elegida[][] = $cartas[$a];    
-    unset($cartas[$a]);
-    $cartas = array_values($cartas);
-    echo "<br>&nbsp;&nbsp;",$elegida[$i][0][0], " ";
-    echo $elegida[$i][0][1], " ";  
-  endfor;
-  /*
-  echo "<pre>";
-  print_r($cartas);
-  echo "</pre>";
-  */
-  $punt = 0;
-  foreach($elegida as $key => $puntos):
-    $punt += $puntos[0][1];
-  endforeach;
-  echo "<br/><br/> Puntos:", $punt;
+  endif;
+  echo $resultado;
 ?>
 </body>
 </html>

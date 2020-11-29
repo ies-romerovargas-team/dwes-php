@@ -111,6 +111,8 @@
         <li><a href="Tanda-4/Ejercicio-t4-11/11.php">Ejercicio 11</a></li>
         <li><a href="Tanda-4/Ejercicio-t4-12/12.php">Ejercicio 12</a></li>
         <li><a href="Tanda-4/Ejercicio-t4-13/13.php">Ejercicio 13</a></li>
+        <li><a href="Tanda-4/Ejercicio-t4-14/14.php">Ejercicio 14</a></li>
+        <li><a href="Tanda-4/Ejercicio-t4-15/15.php">Ejercicio 15</a></li>
       </ul>
     </div>
   </div>
