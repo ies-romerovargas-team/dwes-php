@@ -4,20 +4,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ejercicio T4-10</title>
+  <title>Ejercicio T4-11</title>
 </head>
 
 <body>
   <p><a href="../../index.php">Inicio</a></p>
-  <h1>Ejercicio T4-10</h1>
-  <p>Realiza un programa que escoja al azar 10 cartas de la baraja española y que diga
-   cuántos puntos suman según el juego de la brisca. Emplea un array asociativo para 
-   obtener los puntos a partir del nombre de la figura de la carta. Asegúrate de que no 
-   se repite ninguna carta, igual que si las hubieras cogido de una baraja de verdad.</p>
+  <h1>Ejercicio T4-11</h1>
+  <p>Crea un mini-diccionario español-inglés que contenga, al menos, 20 palabras (con su traducción). Utiliza un array asociativo para almacenar las parejas de palabras. El programa pedirá una palabra en español y dará la correspondiente traducción en inglés.</p>
 
 <?php
-  $numeros = ["1" => 11, "2" => 0, "3" => 10, "4" => 0, "5" => 0, "6" => 0, "7" => 0, "Sota" => 2, "Caballo" => 3, "Rey" => 4];
-  $palos = ["oros", "copas", "bastos", "espadas"];
+  
+  $diccionario = [
+    ""
+  ];
   foreach($palos as $palo):
     foreach($numeros as $key => $numero):
       $cartas[][] = $key . '/'. $palo;

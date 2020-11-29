@@ -15,7 +15,73 @@
   para ello una tabla. Seguidamente el programa pasará los primos a las primeras posiciones, 
   desplazando el resto de números (los que no son primos) de tal forma que no se pierda 
   ninguno. Al final se debe mostrar el array resultante</p>
-  
+<?php if(isset($_POST['numero'])):  
+  $contador = $_POST['contador'] + 1;
+  $vector = $_POST['vector'];
+  $vector[] = $_POST['numero'];
+else:
+  $contador = 0;
+  $vector = [];
+endif;
+if($contador==10):?>
+<table border="1" cellspacing="0">
+<tr><th colspan="10">Array inicial</th></tr>
+  <tr>
+  <?php for($i = 0; $i < 10; $i++):?>
+    <th><?=$i?></th>
+  <?php endfor;?>
+  </tr>
+  <tr>
+  <?php for($i = 0; $i < 10; $i++):?>
+    <th><?=$vector[$i]?></th>
+  <?php endfor;?>
+  </tr>
+</table>
+<?php
+  $pointer = 0;
+  foreach($vector as $key => $value):
+    $n = $value - 1;
+    $primo = true;
+    while($n >= 2):            
+      if($value%$n==0):
+        $primo = false;
+      break;
+      endif;
+      $n--;
+    endwhile;
+    if($primo):      
+      if($pointer!=$key):
+        $aux = $vector[$pointer];
+        $vector[$pointer] = $value;
+        $vector[$key] = $aux;
+      endif; 
+      $pointer++;
+    endif;    
+  endforeach;
+?>
+<br>
+<table border="1" cellspacing="0">
+  <tr><th colspan="10">Array final</th></tr>
+  <tr>
+  <?php for($i = 0; $i < 10; $i++):?>
+    <th><?=$i?></th>
+  <?php endfor;?>
+  </tr>
+  <tr>
+  <?php for($i = 0; $i < 10; $i++):?>
+    <th><?=$vector[$i]?></th>
+  <?php endfor;?>
+  </tr>
+</table>
+  <?php else:?>
+  <form action="<?=$_SERVER['PHP_SELF']?>" method="POST">
+    <input name="numero" type="number" autofocus required>
+    <input type="hidden" name="contador" value="<?=$contador?>">
+    <?php foreach($vector as $value):?>
+      <input type="hidden" name="vector[]" value="<?=$value?>">
+    <?php endforeach;?>
+    <input type="submit" name="Enviar" value="Ok">
+  </form>
+  <?php endif;?>
 </body>
-
 </html>

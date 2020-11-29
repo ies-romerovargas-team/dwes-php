@@ -18,10 +18,12 @@
     for($i=0;$i<20;$i++):
       $array[] = rand(0,100);
     endfor;
-    print_r($array);
-    echo "<br/>";
+    echo "<div style='float:left'>";
+    echo "<pre>";
+    print_r($array);    
+    echo "</pre>";
+    echo "</div>";
     foreach ($array as $key => $value):
-      echo $value, " ";
       if($value%2==0):
         $arrayPar[] = $value;
       else:
@@ -29,17 +31,17 @@
       endif;
     endforeach;
     $i=0;
-    echo "<br/>";
     foreach ($arrayPar as $key => $value) {
-      echo $value, " ";
       $array[$i++]=$value;      
     }
     foreach ($arrayImpar as $key => $value) {
-      echo $value, " ";
       $array[$i++]=$value;      
     }
-    echo "<br/>";
-    print_r($array);
+    echo "<div style='float:left'>";
+    echo "<pre>";
+    print_r($array);    
+    echo "</pre>";
+    echo "</div>";
   ?>
 </body>
 
