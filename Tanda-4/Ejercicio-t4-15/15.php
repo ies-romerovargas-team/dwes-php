@@ -16,19 +16,20 @@
     original como la matriz resultado, ambas con los números convenientemente alineados.</p>
   <?php
   /*
+    0   1   2   3   4   5   6   7   8   9   10  11
 
-33 	58 	48 	15 	75 	87 	17 	98 	95 	31 	36 	90
-78 	70 	25 	87 	71 	35 	14 	29 	48 	75 	86 	73
-44 	98 	76 	18 	46 	80 	10 	11 	91 	83 	23 	93
-91 	24 	93 	49 	28 	84 	61 	47 	82 	94 	45 	19
-31 	51 	96 	95 	24 	99 	33 	62 	17 	68 	13 	10
-20 	83 	14 	47 	21 	54 	68 	69 	97 	38 	26 	38
-49 	36 	20 	34 	37 	82 	50 	33 	20 	92 	52 	72
-14 	84 	52 	62 	91 	22 	73 	77 	70 	26 	73 	83
-63 	77 	21 	20 	57 	54 	12 	64 	98 	60 	45 	85
-12 	61 	36 	42 	54 	52 	53 	87 	52 	71 	31 	98
-31 	93 	34 	98 	37 	91 	65 	42 	71 	90 	47 	73
-66 	89 	37 	98 	91 	92 	21 	34 	99 	11 	41 	98
+0  33 	58 	48 	15 	75 	87 	17 	98 	95 	31 	36 	90
+1  78 	70 	25 	87 	71 	35 	14 	29 	48 	75 	86 	73
+2  44 	98 	76 	18 	46 	80 	10 	11 	91 	83 	23 	93
+3  91 	24 	93 	49 	28 	84 	61 	47 	82 	94 	45 	19
+4  31 	51 	96 	95 	24 	99 	33 	62 	17 	68 	13 	10
+5  20 	83 	14 	47 	21 	54 	68 	69 	97 	38 	26 	38
+6  49 	36 	20 	34 	37 	82 	50 	33 	20 	92 	52 	72
+7  14 	84 	52 	62 	91 	22 	73 	77 	70 	26 	73 	83
+8  63 	77 	21 	20 	57 	54 	12 	64 	98 	60 	45 	85
+9  12 	61 	36 	42 	54 	52 	53 	87 	52 	71 	31 	98
+0  31 	93 	34 	98 	37 	91 	65 	42 	71 	90 	47 	73
+1  66 	89 	37 	98 	91 	92 	21 	34 	99 	11 	41 	98
 
 78  33 	58 	48 	15 	75 	87 	17 	98 	95 	31 	36 	
 44 	70 	25 	87 	71 	35 	14 	29 	48 	75 	86 	90
@@ -63,18 +64,18 @@
     $topColRight = 11 - $i;
     $topFilDown = 11 - $i;
     $topColLeft = $i;
-    $topFilUp = $i + 1;
+    $topFilUp = $i + 1;    
     for($j=$fil; $j<=$topColRight; $j++):
-      $array2[$i][] = $array1[$fil][$j];
+      $array2[$i][] = $array1[$fil][$j];      
     endfor;
     for($j=$col + 1; $j<=$topFilDown; $j++):
       $array2[$i][] = $array1[$j][11-$col];
     endfor;
-    for($j=11-$fil; $j>=$topColLeft; $j--):
+    for($j=11-$i-1; $j>=$topColLeft; $j--):
       $array2[$i][] = $array1[11-$fil][$j];
     endfor;
-    for($j=11-$col; $j>=$topFilUp; $j--):
-      $array2[$i][] = $array1[$j][$fil];
+    for($j=11-$i-1; $j>=$topFilUp; $j--):
+      $array2[$i][] = $array1[$j][$fil];      
     endfor;
   endfor;
   // ultimo caso
@@ -94,52 +95,53 @@
   endfor;
   // montamos de nuevo la matriz
   for($i=0; $i<5; $i++):
-    $fil=$i;
-    $col=$i;
-    $topColRight = 11 - $i;
-    $topFilDown = 11 - $i;
-    $topColLeft = $i;
-    $topFilUp = $i + 1;
-    foreach($array2[$i] as $value):
-      $array1[$fil][$col] = $value;
-      if($col<$topColRight):
-        $col++;
-      else:
-        if($fil<=$topFilDown):
-          $fil++;
-        else:
-          if($col>$topColLeft):
-            $col--;
-          else:
-            if($fil>=$topFilUp):
-              $fil--;
-            endif;
-          endif;
-        endif;
-      endif;
-    endforeach;
-  endfor;
-  
-  for($i=0; $i<5; $i++):
     $fil = $i;
     $col = $i;
     $topColRight = 11 - $i;
     $topFilDown = 11 - $i;
     $topColLeft = $i;
     $topFilUp = $i + 1;
-    for($j=$fil; $j<=$topColRight; $j++):
-      $array2[$i][] = $array1[$fil][$j];      
-    endfor;
-    for($j=$col + 1; $j<=$topFilDown; $j++):
-      $array2[$i][] = $array1[$j][11-$col];
-    endfor;
-    for($j=11-$fil; $j>=$topColLeft; $j--):
-      $array2[$i][] = $array1[11-$fil][$j];
-    endfor;
-    for($j=11-$col; $j>=$topFilUp; $j--):
-      $array2[$i][] = $array1[$j][$fil];
-    endfor;
+    $direccion = 0;
+   
+    foreach($array2[$i] as $value):      
+      $array1[$fil][$col] = $value;
+
+      if($direccion == 0){
+        if($col<$topColRight):
+          $col++;
+        else:          
+          $direccion = 1;
+        endif;
+      }
+
+      if($direccion == 1){
+        if($fil<$topFilDown):
+          $fil++;
+        else:
+          $direccion = 2;          
+        endif;
+      }
+      if($direccion == 2){
+        if($col>$topColLeft):
+          $col--;
+        else:
+          $direccion = 3;
+        endif;
+      }
+      if($direccion == 3){
+        if($fil>$topFilUp):
+          $fil--;
+        else:
+          $direccion = 0;
+        endif;
+      }      
+    endforeach;
   endfor;
+  // ultimo caso
+  $array1[5][5] = $array2[5][0];
+  $array1[5][6] = $array2[5][1];
+  $array1[6][6] = $array2[5][2];
+  $array1[6][5] = $array2[5][3];
   ?>
     <table>
       <?php for($i=0; $i<12; $i++):?>
