@@ -115,6 +115,15 @@
         <li><a href="Tanda-4/Ejercicio-t4-15/15.php">Ejercicio 15</a></li>
       </ul>
     </div>
+    <div class="columna">
+      <h3>Tanda 5</h3>
+      <ul>
+        <li><a href="Tanda-5/Ejercicio-t5-01/01.php">Ejercicio 1</a></li>
+        <li><a href="Tanda-5/Ejercicio-t5-02/02.php">Ejercicio 2</a></li>
+        <li><a href="Tanda-5/Ejercicio-t5-03/03.php">Ejercicio 3</a></li>
+        <li><a href="Tanda-5/Ejercicio-t5-04/04.php">Ejercicio 4</a></li>
+      </ul>
+    </div>
   </div>
 </body>
 

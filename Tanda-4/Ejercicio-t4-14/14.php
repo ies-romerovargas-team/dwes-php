@@ -6,35 +6,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ejercicio T4-14</title>
   <style>
-      * {
-        box-sizing: border-box;
-      }
+  * {
+    box-sizing: border-box;
+  }
 
-      .divTable {
-        width: 300px;
-        margin: auto;
-        display: grid;
-        grid-template-columns: 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px;
-      }
+  .divTable {
+    width: 300px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px;
+  }
 
-      .divTableCell {
-        border: 1px solid #999999;
-        height: 30px;
-        width: 30px;
-        text-align: center;
-        vertical-align: middle;
-      }
-    </style>
+  .divTableCell {
+    border: 1px solid rgb(199, 188, 188);
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    /*vertical-align: middle;*/
+  }
+  </style>
 </head>
 
 <body>
   <p><a href="../../index.php">Inicio</a></p>
   <h1>Ejercicio T4-14</h1>
-  <p>Escribe un programa que, dada una posición en un tablero de ajedrez, nos diga a qué casillas podría 
-  saltar un alfil que se encuentra en esa posición. Indícalo de forma gráfica sobre el tablero con un 
-  color diferente para estas casillas donde puede saltar la figura. El alfil se mueve siempre en diagonal. 
-  El tablero cuenta con 64 casillas. Las columnas se indican con las letras de la “a” a la “h” y las filas 
-  se indican del 1 al 8.</p>
+  <p>Escribe un programa que, dada una posición en un tablero de ajedrez, nos diga a qué casillas podría
+    saltar un alfil que se encuentra en esa posición. Indícalo de forma gráfica sobre el tablero con un
+    color diferente para estas casillas donde puede saltar la figura. El alfil se mueve siempre en diagonal.
+    El tablero cuenta con 64 casillas. Las columnas se indican con las letras de la “a” a la “h” y las filas
+    se indican del 1 al 8.</p>
   <?php  
   $tablero = array();
   $c = 1;
@@ -45,15 +45,15 @@
         $tablero[$i][$j][1] = "white";
         $c = $c * -1;
       else:
-        $tablero[$i][$j][1] = "rgb(199, 188, 188)";
+        $tablero[$i][$j][1] = "rgb(199, 188, 188)"; // gris
         $c = $c * -1; 
       endif;      
     endfor;
     $c = $c * -1;   
   endfor;
   if(isset($_POST['Enviar'])):
-    $fila = 9 - $_POST['fila']-1;
-    $columna = ord($_POST['columna']) - 97  ;
+    $fila = 9 - $_POST['fila'] - 1;
+    $columna = ord(strtolower($_POST['columna'])) - 97;
     if($fila > 8 || $fila < 0 || $columna > 8 || $fila <0):
       echo "Error introduciendo posición";
     else:
@@ -102,20 +102,20 @@
     <div class="divTableCell">g</div>
     <div class="divTableCell">h</div>
     <div class="divTableCell">&nbsp;</div>
-  <?php for($i=0; $i<8; $i++): ?>
-    
-      <div class="divTableCell"><?=8-$i?></div>
+    <?php for($i=0; $i<8; $i++): ?>
+
+    <div class="divTableCell"><?=8-$i?></div>
     <?php for($j=0; $j<8; $j++):?>
-      <div class="divTableCell" style ="background-color:<?=$tablero[$i][$j][1]?>; font-size: 2em;">
+    <div class="divTableCell" style="background-color:<?=$tablero[$i][$j][1]?>; font-size: 1.5em;">
       <?php if($tablero[$i][$j][0]=="A"):?>
-        &#9821;
-    <?php else:?>
+      &#9821;
+      <?php else:?>
       &nbsp;
-    <?php endif;?>
-      </div>
+      <?php endif;?>
+    </div>
     <?php endfor;?>
-      <div class="divTableCell"><?=8-$i?></div>    
-  <?php endfor;?>
+    <div class="divTableCell"><?=8-$i?></div>
+    <?php endfor;?>
     <div class="divTableCell">&nbsp;</div>
     <div class="divTableCell">a</div>
     <div class="divTableCell">b</div>
@@ -130,4 +130,5 @@
   <?php
   ?>
 </body>
+
 </html>

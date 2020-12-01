@@ -11,10 +11,10 @@
   <p><a href="../../index.php">Inicio</a></p>
   <h1>Ejercicio T4-11</h1>
   <p>Crea un mini-diccionario español-inglés que contenga, al menos, 20 palabras (con su traducción).
-   Utiliza un array asociativo para almacenar las parejas de palabras. El programa pedirá una palabra
+    Utiliza un array asociativo para almacenar las parejas de palabras. El programa pedirá una palabra
     en español y dará la correspondiente traducción en inglés.</p>
 
-<?php
+  <?php
   
   $diccionario = [
     "way" => "camino",
@@ -42,18 +42,19 @@
     "food" => "comida"
   ];
 ?>
-<form action="<?=$_SERVER['PHP_SELF']?>" method="POST">
-  <input type="text" name="spanish" autofocus required>
-  <input type="submit" name="Enviar" value="TRADUCIR">
-</form>
-<?php if(isset($_POST['spanish'])):
+  <form action="<?=$_SERVER['PHP_SELF']?>" method="POST">
+    <input type="text" name="spanish" autofocus required>
+    <input type="submit" name="Enviar" value="TRADUCIR">
+  </form>
+  <?php if(isset($_POST['spanish'])):
   $resultado = "No encontrado";
   foreach($diccionario as $key => $word):
-    if($_POST['spanish']==$word) 
+    if($_POST['spanish']==$word)
       $resultado = $_POST['spanish'] . ": <em>" . $key . "</em>";
-    endforeach;
-  endif;
+  endforeach;
   echo $resultado;
+  endif;
 ?>
 </body>
+
 </html>
