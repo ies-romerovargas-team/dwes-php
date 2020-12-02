@@ -122,6 +122,10 @@
         <li><a href="Tanda-5/Ejercicio-t5-15/15.php">Ejercicio 15</a></li>
         <li><a href="Tanda-5/Ejercicio-t5-16/16.php">Ejercicio 16</a></li>
         <li><a href="Tanda-5/Ejercicio-t5-17/17.php">Ejercicio 17</a></li>
+        <li><a href="Tanda-5/Ejercicio-t5-18/18.php">Ejercicio 18</a></li>
+        <li><a href="Tanda-5/Ejercicio-t5-19/19.php">Ejercicio 19</a></li>
+        <li><a href="Tanda-5/Ejercicio-t5-20/20.php">Ejercicio 20</a></li>
+        <li><a href="Tanda-5/Ejercicio-t5-21/21.php">Ejercicio 21</a></li>
       </ul>
     </div>
   </div>

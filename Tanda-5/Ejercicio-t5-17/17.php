@@ -21,25 +21,11 @@
   $continuar = true;
   if(isset($_POST['binario'])):
     $bin = $_POST['binario'];
-    for($i=0; $i<strlen($bin);$i++):
-      if($bin[$i]!='0' && $bin[$i]!='1'):
-        echo "Número no válido";
-        $continuar = false;
-      break;              
-      endif;
-    endfor;
-    if($continuar):
-      $dec = 0;
-      $j = 0;
-      for($i=strlen($bin)-1; $i>=0; $i--):
-        $digito = $bin[$i];
-        if($digito==1):
-          $exp = pow(2, $j);
-          $dec += $exp;
-        endif;
-        $j++;
-      endfor;
-      echo $bin, "=> ", $dec;
+    $dec = toDecimal($bin);
+    if($dec!=-1):
+      echo $bin, " => ", $dec;
+    else:
+      echo "Número no válido";
     endif;
   endif;
   ?>
