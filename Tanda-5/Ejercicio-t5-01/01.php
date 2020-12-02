@@ -1,11 +1,11 @@
-<?php include "funciones1-14.php";?>
+<?php include "funciones1-14.php"?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Ejercicio T5-01</title>
   <style>
   .funciona {
     columns: 6;
@@ -17,6 +17,8 @@
 </head>
 
 <body>
+  <p><a href="../../index.php">Inicio</a></p>
+  <h1>Ejercicio T5-01</h1>
   <div class="funciona">
     <h2>100 Capicúas</h2>
     <?php    
